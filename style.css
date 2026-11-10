@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --bg-light: #FAF5F3;
+    --bg-card: #FFFFFF;
+    --wine-primary: #8C3A4A;
+    --wine-hover: #732C3A;
+    --text-dark: #2C2627;
+    --text-muted: #7A6F71;
+    --font-serif: 'Cormorant Garamond', serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* Banner Principal */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('images/hero-bg.jpg') center/cover no-repeat;
+    color: #FFF;
+    padding: 20px 20px 60px 20px;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand h1 {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.brand span {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+}
+
+.badge {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.hero-content h2 {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 25px;
+    max-width: 400px;
+}
+
+.location {
+    font-size: 0.85rem;
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+/* Botões */
+.btn-primary, .btn-hero {
+    background-color: var(--wine-primary);
+    color: #FFF;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-hero {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+}
+
+.btn-outline {
+    border: 1px solid var(--wine-primary);
+    color: var(--wine-primary);
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    background: transparent;
+}
+
+/* Faixa Cor-de-Rosa */
+.banner-strip {
+    background-color: #FCEFEF;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8rem;
+    color: var(--wine-primary);
+}
+
+/* Seções */
+.services-section, .gallery-section, .location-section {
+    padding: 50px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--wine-primary);
+    font-weight: 600;
+}
+
+h2 {
+    font-family: var(--font-serif);
+    font-size: 2.3rem;
+    margin: 10px 0;
+}
+
+.description {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+/* Serviços */
+.service-category {
+    margin-bottom: 35px;
+}
+
+.service-category h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    border-bottom: 1px solid #EAD8D8;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.service-item h4 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.service-item .price {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: block;
+}
+
+.disclaimer {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Galeria */
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.filter-btn {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid #E2D0D0;
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.filter-btn.active {
+    background-color: var(--wine-primary);
+    color: #FFF;
+    border-color: var(--wine-primary);
+}
+
+.gallery-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gallery-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: #FFF;
+}
+
+.card-info h3 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+}
+
+/* Localização & Rodapé */
+.address-box {
+    background: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    line-height: 1.6;
+    border: 1px solid #EAD8D8;
+}
+
+.location-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer {
+    background-color: #1F191A;
+    color: #FFF;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer h3 {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+}
+
+.footer p {
+    font-size: 0.75rem;
+    color: #AAA;
+    margin-top: 20px;
+}
+
+/* Botão Flutuante do WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--wine-primary);
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-decoration: none;
+    z-index: 1000;
+  }
