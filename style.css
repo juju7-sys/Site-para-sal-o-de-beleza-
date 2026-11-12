@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +11,52 @@ body {
     color: #3E2723;
 }
 
-/* Hero / Cabeçalho */
+/* Barra superior branca igual ao modelo original */
+.top-bar {
+    background-color: #FFFFFF;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.brand h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: #2C1810;
+}
+
+.brand span {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    color: #795548;
+    text-transform: uppercase;
+    display: block;
+}
+
+.btn-top-agendar {
+    background-color: #8D4954;
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-top-agendar:hover {
+    background-color: #723741;
+}
+
+/* Hero / Cabeçalho com a foto de fundo */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('imagens/hero-bg.jpg.jpg');
     background-size: cover;
@@ -19,47 +65,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem 1.5rem;
+    padding: 7rem 1.5rem 2rem 1.5rem;
     color: #ffffff;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.brand h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    color: #FFFFFF;
-}
-
-.brand span {
-    font-size: 0.65rem;
-    letter-spacing: 2px;
-    color: #E0D0CE;
-    text-transform: uppercase;
-    display: block;
-}
-
-.btn-top-agendar {
-    background-color: #8D4954;
-    color: #FFFFFF;
-    padding: 0.6rem 1.2rem;
-    border-radius: 9999px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.btn-top-agendar:hover {
-    background-color: #723741;
 }
 
 .hero-content {
@@ -123,9 +130,11 @@ body {
     margin: 0 auto;
     width: 100%;
     font-size: 0.85rem;
-    color: #E0D0CE;
-    border-top: 1px solid rgba(255,255,255,0.2);
-    padding-top: 1rem;
+    color: #2C1810;
+    background-color: #FCE4EC;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
 }
 
 /* Seção de Serviços */
@@ -201,8 +210,8 @@ body {
 
 .btn-service {
     background-color: transparent;
-    border: 1px solid #D7CCC8;
-    color: #5D4037;
+    border: 1px solid #8D4954;
+    color: #8D4954;
     padding: 0.5rem 1.1rem;
     border-radius: 6px;
     font-size: 0.85rem;
@@ -213,7 +222,6 @@ body {
 .btn-service:hover {
     background-color: #8D4954;
     color: #FFFFFF;
-    border-color: #8D4954;
 }
 
 .service-note {
@@ -418,5 +426,4 @@ body {
         text-align: center;
     }
 }
-
    
