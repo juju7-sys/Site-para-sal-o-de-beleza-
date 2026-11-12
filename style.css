@@ -2,286 +2,643 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
-:root {
-    --bg-light: #FAF5F3;
-    --bg-card: #FFFFFF;
-    --wine-primary: #8C3A4A;
-    --wine-hover: #732C3A;
-    --text-dark: #2C2627;
-    --text-muted: #7A6F71;
-    --font-serif: 'Cormorant Garamond', serif;
 }
 
 body {
-    background-color: var(--bg-light);
-    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FAF6F5;
+    color: #3E2723;
 }
 
-/* Banner Principal */
+/* Hero / Cabeçalho */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('images/hero-bg.jpg') center/cover no-repeat;
-    color: #FFF;
-    padding: 20px 20px 60px 20px;
-    min-height: 85vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('imagens/hero-bg.jpg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 2rem 1.5rem;
+    color: #ffffff;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .brand h1 {
-    font-family: var(--font-serif);
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: #FFFFFF;
 }
 
 .brand span {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     letter-spacing: 2px;
+    color: #E0D0CE;
+    text-transform: uppercase;
+    display: block;
+}
+
+.btn-top-agendar {
+    background-color: #8D4954;
+    color: #FFFFFF;
+    padding: 0.6rem 1.2rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-top-agendar:hover {
+    background-color: #723741;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
 }
 
 .badge {
+    display: inline-block;
+    color: #F8D7DA;
     font-size: 0.75rem;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
 .hero-content h2 {
-    font-family: var(--font-serif);
-    font-size: 3rem;
-    line-height: 1.1;
-    margin-bottom: 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #FFF;
 }
 
 .hero-content p {
-    font-size: 1rem;
-    opacity: 0.9;
-    margin-bottom: 25px;
-    max-width: 400px;
+    color: #EFEBE9;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
 }
 
-.location {
-    font-size: 0.85rem;
-    margin-top: 15px;
-    opacity: 0.8;
-}
-
-/* Botões */
-.btn-primary, .btn-hero {
-    background-color: var(--wine-primary);
-    color: #FFF;
-    padding: 12px 24px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
+.btn-main-agendar {
     display: inline-block;
-    border: none;
-    cursor: pointer;
-}
-
-.btn-hero {
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-}
-
-.btn-outline {
-    border: 1px solid var(--wine-primary);
-    color: var(--wine-primary);
-    padding: 8px 18px;
-    border-radius: 20px;
+    background-color: #8D4954;
+    color: #FFFFFF;
+    font-weight: 500;
+    padding: 0.9rem 2.2rem;
+    border-radius: 9999px;
     text-decoration: none;
-    font-size: 0.85rem;
-    background: transparent;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: background 0.3s, transform 0.2s;
+    margin-bottom: 1rem;
 }
 
-/* Faixa Cor-de-Rosa */
-.banner-strip {
-    background-color: #FCEFEF;
-    padding: 15px;
+.btn-main-agendar:hover {
+    background-color: #723741;
+    transform: translateY(-2px);
+}
+
+.location-text {
+    font-size: 0.9rem;
+    color: #E0D0CE;
+    margin-top: 0.5rem;
+}
+
+.hero-footer-tags {
     display: flex;
-    justify-content: space-around;
-    font-size: 0.8rem;
-    color: var(--wine-primary);
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 0.85rem;
+    color: #E0D0CE;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 1rem;
 }
 
-/* Seções */
-.services-section, .gallery-section, .location-section {
-    padding: 50px 20px;
-    max-width: 600px;
+/* Seção de Serviços */
+.services-section {
+    max-width: 900px;
     margin: 0 auto;
+    padding: 5rem 1.5rem;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
 }
 
 .subtitle {
     font-size: 0.7rem;
     letter-spacing: 2px;
-    color: var(--wine-primary);
+    color: #8D4954;
+    text-transform: uppercase;
     font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
-h2 {
-    font-family: var(--font-serif);
-    font-size: 2.3rem;
-    margin: 10px 0;
+.services-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    color: #2C1810;
+    margin-bottom: 0.5rem;
 }
 
-.description {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 30px;
+.services-header p {
+    color: #795548;
+    font-size: 1rem;
 }
 
-/* Serviços */
 .service-category {
-    margin-bottom: 35px;
+    margin-bottom: 3rem;
 }
 
 .service-category h3 {
-    font-family: var(--font-serif);
-    font-size: 1.5rem;
-    border-bottom: 1px solid #EAD8D8;
-    padding-bottom: 8px;
-    margin-bottom: 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: #2C1810;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #EAD7D5;
+    padding-bottom: 0.5rem;
 }
 
 .service-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 18px;
+    background: #FFFFFF;
+    padding: 1.2rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 1px solid #F0E4E3;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
 }
 
-.service-item h4 {
-    font-size: 1rem;
+.service-info h4 {
+    font-size: 1.05rem;
+    color: #3E2723;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.price {
+    font-size: 0.9rem;
+    color: #795548;
+}
+
+.btn-service {
+    background-color: transparent;
+    border: 1px solid #D7CCC8;
+    color: #5D4037;
+    padding: 0.5rem 1.1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-service:hover {
+    background-color: #8D4954;
+    color: #FFFFFF;
+    border-color: #8D4954;
+}
+
+.service-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #8D6E63;
+    margin-top: 3rem;
+}
+
+/* Galeria de Resultados */
+.gallery-results {
+    background-color: #FDFBFA;
+    padding: 5rem 1.5rem;
+    border-top: 1px solid #EAD7D5;
+    border-bottom: 1px solid #EAD7D5;
+}
+
+.gallery-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+}
+
+.gallery-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    color: #2C1810;
+    margin-bottom: 0.5rem;
+}
+
+.gallery-header p {
+    color: #795548;
+    margin-bottom: 1rem;
+}
+
+.insta-link {
+    color: #8D4954;
+    text-decoration: none;
+    font-size: 0.9rem;
     font-weight: 500;
 }
 
-.service-item .price {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    display: block;
-}
-
-.disclaimer {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Galeria */
-.filter-buttons {
-    display: flex;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.filter-btn {
-    padding: 8px 18px;
-    border-radius: 20px;
-    border: 1px solid #E2D0D0;
-    background: transparent;
-    cursor: pointer;
-    font-size: 0.85rem;
-}
-
-.filter-btn.active {
-    background-color: var(--wine-primary);
-    color: #FFF;
-    border-color: var(--wine-primary);
-}
-
-.gallery-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.gallery-cards {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
 .gallery-card {
-    position: relative;
+    background: #FFFFFF;
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #F0E4E3;
 }
 
 .gallery-card img {
     width: 100%;
-    height: 350px;
+    height: 320px;
     object-fit: cover;
-    display: block;
 }
 
-.card-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
-    color: #FFF;
+.gallery-card-text {
+    padding: 1.5rem;
 }
 
-.card-info h3 {
-    font-family: var(--font-serif);
-    font-size: 1.4rem;
-}
-
-/* Localização & Rodapé */
-.address-box {
-    background: #FFF;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    line-height: 1.6;
-    border: 1px solid #EAD8D8;
-}
-
-.location-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.footer {
-    background-color: #1F191A;
-    color: #FFF;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.footer h3 {
-    font-family: var(--font-serif);
-    font-size: 1.8rem;
-}
-
-.footer p {
-    font-size: 0.75rem;
-    color: #AAA;
-    margin-top: 20px;
-}
-
-/* Botão Flutuante do WhatsApp */
-.whatsapp-float {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: var(--wine-primary);
-    color: white;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.gallery-card-text h3 {
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    color: #2C1810;
+    margin-bottom: 0.3rem;
+}
+
+.gallery-card-text p {
+    color: #795548;
+    font-size: 0.85rem;
+}
+
+/* Rodapé / Endereço */
+.footer-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 3rem 1.5rem;
+}
+
+.footer-box {
+    margin-bottom: 4rem;
+}
+
+.footer-box h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: #2C1810;
+    margin-bottom: 0.5rem;
+}
+
+.footer-desc {
+    color: #795548;
+    margin-bottom: 2rem;
+}
+
+.address-card {
+    background: #FFFFFF;
+    border: 1px solid #EAD7D5;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.address-info h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: #2C1810;
+    margin-bottom: 0.5rem;
+}
+
+.address-info p {
+    color: #6D4C41;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.address-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-address {
+    background-color: #8D4954;
+    color: #FFFFFF;
+    padding: 0.7rem 1.2rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
     text-decoration: none;
-    z-index: 1000;
-  }
+    transition: background 0.3s;
+}
+
+.btn-address:hover {
+    background-color: #723741;
+}
+
+.btn-address-outline {
+    background-color: transparent;
+    border: 1px solid #8D4954;
+    color: #8D4954;
+    padding: 0.7rem 1.2rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-address-outline:hover {
+    background-color: #8D4954;
+    color: #FFFFFF;
+}
+
+.footer-bottom {
+    border-top: 1px solid #EAD7D5;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.insta-footer {
+    color: #8D4954;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #8D6E63;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .address-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .copyright {
+        text-align: center;
+    }
+    .hero-footer-tags {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+
+
+Em qui., 12 de nov. de 2026, 15:56, Julia De Oliveira Pessanha <juliadeoliveira619@gmail.com> escreveu:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Priscila Peres - Beleza & Cuidado</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Cabeçalho / Hero -->
+    <header class="hero">
+        <nav class="navbar">
+            <div class="brand">
+                <h1>Priscila Peres.</h1>
+                <span>STUDIO DE BELEZA</span>
+            </div>
+            <a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20agendar%20um%20horário." target="_blank" class="btn-top-agendar">
+                Agendar horário ↗
+            </a>
+        </nav>
+
+        <div class="hero-content">
+            <div class="badge">✨ SUA BELEZA, NOSSA INSPIRAÇÃO</div>
+            <h2>Studio Priscila Peres</h2>
+            <p>Realce sua essência. Um espaço dedicado à sua beleza, ao seu cuidado e ao seu momento.</p>
+            <a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20agendar%20um%20horário." target="_blank" class="btn-main-agendar">
+                💬 Agende seu momento ↗
+            </a>
+            <p class="location-text">📍 Nova Iguaçu, Rio de Janeiro</p>
+        </div>
+
+        <div class="hero-footer-tags">
+            <span>🤍 Cuidado em cada detalhe</span>
+            <span>✨ Beleza que é sua</span>
+        </div>
+    </header>
+
+    <!-- Seção de Preços e Serviços -->
+    <section class="services-section">
+        <div class="services-header">
+            <span class="subtitle">FEITO PARA VOCÊ</span>
+            <h2>Beleza em cada detalhe</h2>
+            <p>Escolha seu cuidado. A gente cuida do resto.</p>
+        </div>
+
+        <!-- Categoria: Sobrancelhas & Cílios -->
+        <div class="service-category">
+            <h3>✨ Sobrancelhas & cílios</h3>
+            
+            <div class="service-item">
+                <div class="service-info">
+                    <h4>Brow Lamination</h4>
+                    <span class="price">R$ 120,00</span>
+                </div>
+                <a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20agendar%20Brow%20Lamination." target="_blank" class="btn-service">Agendar ↗</a>
+            </div>
+
+            <div class="service-item">
+                <div class="service-info">
+                    <h4>Design de Sobrancelhas</h4>
+                    <span class="price">R$ 40,00</span>
+                </div>
+                <a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20agendar%20Design%20de%20Sobrancelhas." target="_blank" class="btn-service">Agendar ↗</a>
+            </div>
+
+            <div class="service-item">
+                <div class="service-info">
+                    <h4>Micropigmentação</h4>
+                    <span class="price">R$ 450,00</span>
+                </div>
+                <a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20agendar%20Micropigmentação." target="_blank" class="btn-service">Agendar ↗</a>
+            </div>
+        </div>
+
+        <!-- Categoria: Cabelos & mechas -->
+        <div class="service-category">
+            <h3>✂️ Cabelos & mechas</h3>
+            
+            <div class="service-item">
+                <div class="service-info">
+                    <h4>Loiras & Mechas</h4>
+                    <span class="price">R$ 350,00</span>
+                </div>
+                <a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20agendar%20Loiras%20%26%20Mechas." target="_blank" class="btn-service">Agendar ↗</a>
+            </div>
+
+            <div class="service-item">
+                <div class="service-info">
+                    <h4>Corte de Cabelo</h4>
+                    <span class="price">R$ 80,00</span>
+                </div>
+                <a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20agendar%20Corte%20de%20Cabelo." target="_blank" class="btn-service">Agendar ↗</a>
+            </div>
+
+            <div class="service-item">
+                <div class="service-info">
+                    <h4>Penteados</h4>
+                    <span class="price">R$ 150,00</span>
+                </div>
+                <a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20agendar%20Penteados." target="_blank" class="btn-service">Agendar ↗</a>
+            </div>
+        </div>
+
+        <!-- Categoria: Lábios & estética -->
+        <div class="service-category">
+            <h3>🌸 Lábios & estética</h3>
+            
+            <div class="service-item">
+                <div class="service-info">
+                    <h4>Micropigmentação Labial</h4>
+                    <span class="price">R$ 450,00</span>
+                </div>
+                <a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20agendar%20Micropigmentação%20Labial." target="_blank" class="btn-service">Agendar ↗</a>
+            </div>
+
+            <div class="service-item">
+                <div class="service-info">
+                    <h4>Estética / Cuidados Faciais</h4>
+                    <span class="price">R$ 120,00</span>
+                </div>
+                <a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20agendar%20Cuidados%20Faciais." target="_blank" class="btn-service">Agendar ↗</a>
+            </div>
+        </div>
+
+        <!-- Categoria: Unhas & maquiagem -->
+        <div class="service-category">
+            <h3>💅 Unhas & maquiagem</h3>
+            
+            <div class="service-item">
+                <div class="service-info">
+                    <h4>Manicure / Nails de Alto Padrão</h4>
+                    <span class="price">R$ 60,00</span>
+                </div>
+                <a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20agendar%20Manicure." target="_blank" class="btn-service">Agendar ↗</a>
+            </div>
+
+            <div class="service-item">
+                <div class="service-info">
+                    <h4>Maquiagem Profissional</h4>
+                    <span class="price">R$ 180,00</span>
+                </div>
+                <a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20agendar%20Maquiagem." target="_blank" class="btn-service">Agendar ↗</a>
+            </div>
+        </div>
+
+        <p class="service-note">Valores ilustrativos. Confirme os preços e os detalhes do procedimento pelo WhatsApp antes de agendar.</p>
+    </section>
+
+    <!-- Seção de Galeria de Resultados -->
+    <section class="gallery-results">
+        <div class="gallery-header">
+            <span class="subtitle">NOSSO TRABALHO, SUA BELEZA</span>
+            <h2>Resultados que encantam</h2>
+            <p>Transformações reais, feitas aqui no studio.</p>
+            <a href="https://instagram.com/studiopriscilaperes" target="_blank" class="insta-link">📸 Veja mais no Instagram ↗</a>
+        </div>
+
+        <div class="gallery-cards">
+            <!-- Card 1 -->
+            <div class="gallery-card">
+                <img src="imagens/cabelo-loiro.jpg.jpg" alt="Loiras & mechas">
+                <div class="gallery-card-text">
+                    <h3>Loiras & mechas</h3>
+                    <p>Iluminação que valoriza você</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="gallery-card">
+                <img src="imagens/brow-lamination.jpg.jpg" alt="Brow lamination">
+                <div class="gallery-card-text">
+                    <h3>Brow lamination</h3>
+                    <p>Um novo olhar, a mesma essência</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="gallery-card">
+                <img src="imagens/design-sobrancelhas.jpg.jpg" alt="Design de sobrancelhas">
+                <div class="gallery-card-text">
+                    <h3>Design de sobrancelhas</h3>
+                    <p>Beleza nos pequenos detalhes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Endereço / Rodapé -->
+    <footer class="footer-section">
+        <div class="footer-box">
+            <span class="subtitle">TE ESPERAMOS AQUI</span>
+            <h2>Seu próximo momento de beleza tem endereço.</h2>
+            <p class="footer-desc">Studio Priscila Peres, em Nova Iguaçu.<br>Venha se cuidar e se sentir ainda mais você.</p>
+            
+            <div class="address-card">
+                <div class="address-info">
+                    <h4>📍 Studio Priscila Peres</h4>
+                    <p>Rua Otávio Moreira de Melo, 15, Sala<br>Nova Iguaçu — RJ<br>CEP 26271-001</p>
+                </div>
+                <div class="address-buttons">
+                    <a href="https://maps.google.com/?q=Rua+Otávio+Moreira+de+Melo+15+Nova+Iguaçu" target="_blank" class="btn-address">Como chegar ↗</a>
+                    <a href="https://wa.me/5521999999999?text=Olá!%20Gostaria%20de%20agendar%20um%20horário." target="_blank" class="btn-address-outline">Agendar 💬</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="brand">
+                <h2>Priscila Peres.</h2>
+                <span>STUDIO DE BELEZA</span>
+            </div>
+            <a href="https://instagram.com/studiopriscilaperes" target="_blank" class="insta-footer">ig @studiopriscilaperes ↗</a>
+            <p class="copyright">© 2026 Studio Priscila Peres.<br>Beleza com cuidado e personalidade.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
